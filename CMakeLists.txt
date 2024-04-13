@@ -11,6 +11,7 @@ target_sources(go_back_n PUBLIC
 	src/receiver.c
 	src/pipe.c
 	src/player.c
+	src/gbn.c
 )
 
 target_link_libraries(go_back_n)

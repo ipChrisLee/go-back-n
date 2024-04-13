@@ -2,4 +2,5 @@ import-conan
 build*
 CMakeUserPresets.json
 .vscode
+!demo/file-to-send.txt
 demo
