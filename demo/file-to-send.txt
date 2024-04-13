@@ -1,0 +1,18 @@
+This is just a file to be sent. Also some of my complain about this homework.
+
+Since our lecture teacher and ta don't have any anti-cheating mechanism and the homework has never changed for a long time,
+almost every students "learned from" other previous students' homework, while teacher and ta will say nothing about this.
+
+On the other hands, the homework code will be judged by ta's taste, it is to say, there is no standard answer or some other
+machanism to say why a student gets better score than anthor student.
+In algorithm lecture, every students should pass OJ tests. Obviously students can cheat since the lack of plagiarism, but
+students are juedged in a very objective standard.
+However, for this homework, you can be "LAZY". It's ok not to achieve packet corruption, it's ok not to simulate real web env,
+it's ok not do any test and you can SAY LOUDLY that you are right --- anyway ta won't be strict (they may not try to run your 
+code), why you so serious?
+
+I think, this is a kind of, bully honest people.
+No one needs "correct" implementation, ta and teacher don't give it a shit. So students don't give it a shit. They just copy-paste
+previous students' code, and get a good score they want. The code? Why bother? It has always been the case!
+But, is it right that this has always been the case? Is it right that students in school are not care about the knowledge and
+programming skill, but spend their time on FUCKING score and homework report?
