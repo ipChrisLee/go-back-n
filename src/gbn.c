@@ -96,22 +96,3 @@ void raw_gbn_pkt_dump(RawGbnPacket * p, bool printBuffer) {
 bool chksum_ok(RawGbnPacket * p, size_t pktLen) {
 	return chksum(p, pktLen) == 0;
 }
-
-GbnPacket * new_packet(void * _) {
-	GbnPacket * p = malloc(sizeof(GbnPacket));
-	p->stat = Gbn_Unknown;
-	p->buf = NULL;
-	return p;
-}
-
-GbnPacket * new_packet(GbnPktStat s, char * b) __attribute__((overloadable)) {
-	GbnPacket * p = malloc(sizeof(GbnPacket));
-	p->stat = s;
-	p->buf = b;
-	return p;
-}
-
-void delete_packet(GbnPacket * p, bool recursive) {
-	if (recursive) { free(p->buf); }
-	free(p);
-}

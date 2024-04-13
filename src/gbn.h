@@ -45,28 +45,8 @@ void delete_raw_gbn_pkt(RawGbnPacket * p);
 void raw_gbn_pkt_dump(RawGbnPacket * p, bool printBuffer);
 
 // N in go-back-n
-#define GBN_N 20
-//
+#define GBN_N 10
 #define GBN_TIMEOUT_TK (CLOCKS_PER_SEC * 2)
 
 uint16_t chksum(void * p, size_t size);
 bool chksum_ok(RawGbnPacket * p, size_t pktLen);
-
-// ------------------------------------------------
-
-typedef enum {
-	Gbn_Unknown,
-	Gbn_Ack,
-	Gbn_Corrupt,
-} GbnPktStat;
-
-typedef struct {
-	GbnPktStat stat;
-	char * buf;
-} GbnPacket;
-
-GbnPacket * new_packet(void * /*place holder*/);
-
-GbnPacket * new_packet(GbnPktStat s, char * b) __attribute__((overloadable));
-
-void delete_packet(GbnPacket * p, bool recursive);

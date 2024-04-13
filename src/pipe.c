@@ -76,8 +76,8 @@ int pipe_main(int argc, char ** argv) {
 		ssize_t n = recvfrom(fdFromSrc, data, RAW_GBN_PKT_MAXLEN - 1, 0,
 							 (struct sockaddr *) NULL, (socklen_t *) NULL);
 		if (n == -1) {
-			// printf("recvfrom error, %s", strerror(errno));
-			// stdout_endl();
+			printf("recvfrom error, %s", strerror(errno));
+			stdout_endl();
 			continue;
 		}
 		printf("For packetCnt[%u], recvfrom returns %zd.", packetCnt, n);
