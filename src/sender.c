@@ -106,10 +106,11 @@ int sender_main(int argc, char ** argv) {
 		s;
 	});
 
+	const size_t NEXTSEQ_STEP = 10;
 	size_t base = 0;
-	size_t nextseq = min_size(base + GBN_N, packetCount);
-	const size_t NEXTSEQ_STEP = 5;
-	const size_t RETRY_NUMBER = 10;
+	size_t nextseq =
+		min_size(min_size(base + NEXTSEQ_STEP, packetCount), base + GBN_N);
+	const size_t RETRY_NUMBER = 20;
 	size_t retry = RETRY_NUMBER;
 
 	clock_t startClock = clock();

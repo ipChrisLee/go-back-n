@@ -45,7 +45,7 @@ void delete_raw_gbn_pkt(RawGbnPacket * p);
 void raw_gbn_pkt_dump(RawGbnPacket * p, bool printBuffer);
 
 // N in go-back-n
-#define GBN_N 10
+#define GBN_N 15
 #define GBN_TIMEOUT_TK (CLOCKS_PER_SEC * 2)
 
 uint16_t chksum(void * p, size_t size);

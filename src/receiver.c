@@ -67,13 +67,13 @@ int receiver_main(int argc, char ** argv) {
 
 	const size_t END_ACK_RETRY_NUMBER = 1000;
 	// send ack per x times try to recvfrom
-	const size_t RECV_ACK_RETRY_NUMBER = 10000;
+	const size_t RECV_ACK_RETRY_NUMBER = 1000000;
 	uint16_t expectedSeqnum = 0;
 	size_t ackPktLen;
 	RawGbnPacket * ackPkt = NULL;
 
 	while (true) {
-		size_t recvRetryCount = RECV_ACK_RETRY_NUMBER;
+		size_t recvRetryCount = 0;
 		ssize_t n = -1;
 		while (n == -1) {
 			n = recvfrom(sockForRecv, data, RAW_GBN_PKT_MAXLEN - 1, 0,
