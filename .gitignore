@@ -4,3 +4,4 @@ CMakeUserPresets.json
 .vscode
 demo/*
 !demo/file-to-send.txt
+!demo/ANNA_KARENINA.txt
